@@ -47,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
         webView = findViewById(R.id.web_view);
         webView.getSettings().setJavaScriptEnabled(true);
         webView.setWebViewClient(new WebViewClient());
+        webView.setVerticalScrollBarEnabled(false); // 去除webview原生滚动条
         // code from https://blog.csdn.net/qq_21138819/article/details/56676007 by 欢子-3824
         webView.setWebChromeClient(new WebChromeClient() {
             // Andorid 4.1----4.4
@@ -134,7 +135,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         // 这里填你需要打包的 H5 页面链接
-        webView.loadUrl("https://baidu.com");
+        webView.loadUrl("http://192.168.0.102:5173/");
 
         //显示一些小图片（头像）
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
