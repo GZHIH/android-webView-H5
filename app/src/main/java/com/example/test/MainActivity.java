@@ -47,7 +47,8 @@ public class MainActivity extends AppCompatActivity {
         webView = findViewById(R.id.web_view);
         webView.getSettings().setJavaScriptEnabled(true);
         webView.setWebViewClient(new WebViewClient());
-        webView.setVerticalScrollBarEnabled(false); // 去除webview原生滚动条
+        webView.setVerticalScrollBarEnabled(false); // 去除webview原生垂直滚动条
+        webView.setHorizontalScrollBarEnabled(false); // 去除webview原生水平滚动条
         // code from https://blog.csdn.net/qq_21138819/article/details/56676007 by 欢子-3824
         webView.setWebChromeClient(new WebChromeClient() {
             // Andorid 4.1----4.4
